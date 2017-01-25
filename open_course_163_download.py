@@ -40,7 +40,7 @@ if __name__ == "__main__":
     courses = []
     for url in sys.argv[1:]:
         html_content = download(url)
-        courses = list(parse_courses(html_content))
+        courses += list(parse_courses(html_content))
 
     with Pool(processes=NUM_PROCESSES) as pool:
         pool.map(you_get, courses)
