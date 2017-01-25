@@ -12,9 +12,6 @@ Dependency
 ----------
 
 - Python3
+- BeautifulSoup
+- Requests
 - [you-get](https://github.com/soimort/you-get)
-
-TODO
-----
-
-- [ ] download "查看全部"
