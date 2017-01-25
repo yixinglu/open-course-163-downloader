@@ -22,10 +22,7 @@ def download(url):
 def parse_courses(html_content):
     soup = BeautifulSoup(html_content, 'html.parser', from_encoding='utf-8')
     courses = soup.find_all('a', href=re.compile(r'http://open\.163\.com/movie/*'))
-    urls = set()
-    for course in courses:
-        urls.add(course['href'])
-    return urls
+    return set(course['href'] for course in courses)
 
 
 def you_get(url):
